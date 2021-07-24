@@ -1,0 +1,8 @@
+Numbers..
+1.integer 정수형
+
+2.float 유동소수점형
+
+text....
+1.String
+text를 나타내기 위해서는 " "안에 text를 적을 필요가 있다.
