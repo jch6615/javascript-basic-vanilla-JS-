@@ -1,0 +1,49 @@
+
+WE are going to clone "Momentum" 생산성앱.
+
+1. 이름을 입력하고 refresh 해도 이름을 기억하게
+2. 시계 만들기
+3. 현재 위치, 날씨를 표시
+4. 매일 랜덤하게 배경이나 명언이 바뀌도록 하는 기능
+5. To-do List 작성
+
+HTML & CSS 기초 지식 알아두자.
+☆ kokoa Clone 다시 클론하자.
+
+
+#1.4 Why JS??
+1. Why the JavaSCript is so broadly used??
+2. There are so many things can do with JS.
+
+JavaScript is the only programming language in Front-End.
+
+Browser understands HTML,CSS,JavaScript we don't have to download JS.
+It is already there in our computer.
+JavaScript cannot be replaced by some other programming language.
+
+Let's see what JavaScript can do. Let's see the limits, how much we can push with JavaScript.
+
+1. three.js
+➤ 'three.js' is library, allows us to build 3D stuff with JavaScript.
+➤ We can make simply interactive game with JavaScript.
+(To make better looking, we need extra skills)
+
+2. React Native
+if you want to learn more about JS, move on to frame work ➤ React Native.
+➤ we can build andriod application with React Native.
+
+3. ELECTRON
+Can make destop application with HTML, CSS, JS.
+ex) Visual Studio Code is also made by ELECTRON. (Twitch, Slack...)
+
+Today, we can use JS in Back-End also.
+(we can build all website with using only JS)
+
+4. socket.io
+if you are interested in 3D and real-time stuff, you can use JS.
+
+5. ml5js.org
+we can machine learning with JS.
+ml5js, can build machine learning programs.
+(detect human motivation etc...)
+
