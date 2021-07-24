@@ -47,3 +47,6 @@ we can machine learning with JS.
 ml5js, can build machine learning programs.
 (detect human motivation etc...)
 
+** if you cannot use VSC **
+
+replit.com
