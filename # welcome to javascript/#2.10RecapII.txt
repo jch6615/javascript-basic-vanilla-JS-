@@ -1,0 +1,58 @@
+Array를 사용하면, 내가 정한 varialbe에 속해 저장되 있기때문에 어떤 것들인지 알기 쉽다.
+하지만, 의미 있는 property를 만들고 싶을때에는 Array는 적합하지 않다.
+
+이 때에는 'Object'를 생성하여 묶는다.
+const player = {
+    name: "nico",
+    age: 88,
+};
+
+player.name 로 property를 불러오거나,
+player.name = "paul" 로 property 값을 update 할 수있다.
+player.sexy = "soon" 과 같이 새로운 porperty를 추가 할 수도 있다.
+
+function은 어떤 코드를 캡슐화 하여 계속해서 반복 사용할 수 있도록 한것.
+function plus() {
+    console.log(2 + 2);
+}
+
+function을 불러낼때에는 항상 function에 괄호()를 붙히고 알맞은 argument를 보내자.
+ex) alert("hello"); alert도 function인 것이다.
+
+argument(인수)가 있는 함수를 만들때, 인수에 해당하는 변수명은 자유롭게 만들면 된다.
+ex) function plus(potato, salad) {
+    console.log(potato + salad);
+}
+
+plus(5, 10);
+
+console.log("")를 많이 사용해왔다.
+이와 비슷한것이,
+
+const calculator = {
+    add: function(a,b){
+        console.log(a,b);
+    };
+};
+calculator.add(5,1);
+
+
+const calculator = {
+    add: function(a,b){
+        console.log(a + b);
+    },
+    minus: function(a,b){
+        console.log(a - b);
+    },
+    divide: function(a,b) {
+        console.log(a/b);
+    },
+    powerof: function(a,b){
+        console.log(a**b);
+    }
+};
+
+calculator.add(2,4);
+calculator.minus(1,5);
+calculator.divide(10,2);
+calculator.powerof(2,6);
