@@ -1,0 +1,25 @@
+먼저 데이터 타입!
+글자는 String ! " " or ' '
+숫자는 integer !
+
+계산이나 수치를 사용할때 변수를 variable을 사용한다.
+variable에는 const 와 let 이 있다.
+const 는 변경불가능. constant
+let 은 변경가능.
+*WARNING* let's not use var. it's old fashioned.
+
+데이터 타입에는 boolean 이란 것도 있다.
+boolean에는 true 와 false 가 존재.
+
+값이 없다, empty 이다 라고 하고 싶을 때는 null 을 사용 한다.
+또, 정의 되지 않았다고 사용하고 싶은 경우 undefined 를 사용한다.
+*WARNING* null 과 undefiend 는 다르다.
+
+하나의 변수에 여러 데이터를 관리하는 법도 배웠다.
+변수로 Array를 만들어 []안에 데이터를 저장한다.
+
+ex) const toBuy = ["potato", "tomato", "pizza"];
+Array[0]과 같이 Array 속의 데이터에 접근, 불러 올 수도 있다.
+
+toBuy[2] = "water"; 과 같이 update 도 가능하다.
+toBuy.push("meat"); 과 같이 새로운 데이터를 추가 할 수도 있다.
