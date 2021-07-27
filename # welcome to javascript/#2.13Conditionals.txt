@@ -2,13 +2,13 @@
 //어떤게 true 인지 false 인지 알려준다.
 //사용자가 로그인해 있는지 아닌지,등등
 
-//const age = prompt("How old are you?");
+const age = prompt("How old are you?");
 //prompt라는 function은 질문창?을 띄워줌.
 //하지만! prompt는 old fashioned한 function 이라 더 이상 사용하지 않는다.
 //단점1. prompt의 질문창이 뜨면 javascript가 강제적으로 중단된다.
 //단점2. font나 css 디자인을 수정 할 수 없다.
 
-//console.log(typeof age)
+console.log(typeof age)
 
 //데이터 타입을 확인해 보고 싶으면 typeof 를 사용하자.
 
