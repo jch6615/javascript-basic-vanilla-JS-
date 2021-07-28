@@ -1,12 +1,23 @@
+we gonna learn how JavaScript is working on website.
+
+The point of using JavaScript is to make HTML interactive.
+We should be able to modify, touch and read the HTML code with JavaScript.
+
 JavaScript가 어떻게 Browser을 움직이는지 알아보자.
 
 HTML elements들을 JavaScript에서 읽어올 수 있다.
-//Console에 document라는 이미 Browser에 존재하는 Object를 입력하면 HTML의 내용을 볼 수 있다.
+Browser에는 document라는 Object가 존재한다.
+Document를 입력하면 HTML의 내용을 볼 수 있다.
 
 //console.dir() 은 consolo.log() 다음으로 많이 사용되는 함수이다.
 //dir 함수는 객체의 속성을 계층구조로 출력해 보여준다.
+ex) console.dir(document)
 
 document.title = "~~~"을 기입하여 Console 혹은 JavaScript 파일에서 HTML의 타이틀을 변경할 수 있다.
-이와 같이 document라는 Object는 아주 유용하다. 
+😍[document]라는 Object는 아주 유용하다. 
 !!document Object에는 어떤 function등이 있는지 알아보자.
-(JavaScript에서 HTML의 요소를 가져오거나, 변경하는 등 여러가지를 가능하게 해줌)
+
+다시 강조!!
+document 라는 Object를 알아둬라 !!
+JavaScript에서 HTML의 요소를 가져오거나, 변경하는 등 여러가지를 가능하게 해줌.
+Everything starts form document!!!
