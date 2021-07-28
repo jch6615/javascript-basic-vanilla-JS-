@@ -1,0 +1,26 @@
+저번 강의에서는..
+document.getElementById()를 이용하여 id값을 가지고 있는 element를 불러왔다.
+
+이번 시간에는 id 보다 자주 사용되는 class를 지정하여 불러오는등 여러 방법을 알아보자.
+
+(1) getElementsByClassName
+const hellos = document.getElementsByClassName('hello');
+//class="hello" 를 가진 모든 element를 불러온다.
+!! 불러온 값은 array로 불러온다.!!
+
+console.log(hellos);
+
+(2) getElementsByTagName
+const title = document.getElementsByTagName("h1");
+// 모든 h1 태그를 불러온다. 이 때, title은 element가 아니라 element가 들어있는 Array임을 주의하자.
+
+(3) querySelector & querySelectorAll (the Coolist!)😍
+//element를 css 방식으로 검색할 수 있다.
+
+ex) const title = document.querySelector(".hello h1");
+//class="hello" 를 가진 element의 자식 태그 H1을 지정.
+//단! 해당하는 element가 여러개 있더라도 가장 첫번재 요소만을 가져온다.
+
+//해당하는 모든 Element를 가져오고 싶다면..
+ex) const title = document.querySelectorAll(".hello h1");
+//로 가져오자. 대신 Array의 형태로 가져옴.
