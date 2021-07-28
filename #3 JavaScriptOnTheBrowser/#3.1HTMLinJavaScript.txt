@@ -1,0 +1,15 @@
+이번에는 HTML의 요소를 Grab 해오는 방법을 알아보자.
+
+JavaScript로 정보를 가지고 올 수 있는 방법은...
+document Object와 element를 가져오는 함수들을 이용 하는 것이다.
+
+매우 자주 이용할 것이기 때문에 잘 알아두자.
+
+Now FIRST! 
+How to grab ID element from HTML?
+const title = document.getElementById("title");
+// getElementById 라는 함수로 id="title"을 가진 element를 불러온다. document은 HTML을 뜻한다.
+console.dir(title); 
+//id=title 에 대한 정보를 쭉 나열해준다.
+
+위와 같이 document.function으로 HTML에 있는 element를 찾아와서 변경거나 변화를 줄 수 있다.

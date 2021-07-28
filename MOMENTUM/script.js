@@ -1,1 +1,3 @@
-document.title = "HEllo from JS";
+const title = document.getElementById("title");
+
+title.innerText = "got you!";
