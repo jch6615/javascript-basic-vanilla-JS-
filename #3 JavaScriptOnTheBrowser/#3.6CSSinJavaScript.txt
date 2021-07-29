@@ -1,0 +1,37 @@
+Let's try to modify CSS in JavaScript!
+
+We are going to change the color of h2 tag, whenever the h2 is clicked.
+(default → Blue → tomato → Blue → tomato ...)
+
+❗️STEPS of Listening event and Reaction❗️
+Step 01) Call the HTML element
+Step 02) Listen to an event
+Step 03) React to event (show, hide, change something...etc)
+
+ex)
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick(setColor) {
+    if(h1.style.color === "blue"){
+        h1.style.color = "tomato";
+    } else {
+        h1.style.color = "blue";
+    }
+    }
+
+❌ The code (function) above looks not pretty so.. let's make it look better!
+
+function handleTitleClick(setColor) {
+    const currentColor = h1.style.color;
+    let newColor;
+    if(currentColor === "blue"){
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+    }
+  
+h1.addEventListener("click", function(){handleTitleClick("red")});
+
+    
