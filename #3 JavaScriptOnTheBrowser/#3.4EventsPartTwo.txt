@@ -1,3 +1,17 @@
+listen하고 싶은 event를 검색하는 방법은
+event를 알고 싶은 ELement를 tag element html mdn으로 검색하는것이다.
+이때, JavaScript에서의 ELEMENT를 알고 싶기 때문에 web Api로 검색해주면 좋다.
+
+이게 지루하다면, console.dir을 통해 element들을 console에서 확인하는것이다.
+elements들중에 on이 붙은 친구들이 event이다.
+
+JavaScript파일에서 사용할때는 on을 빼고 사용하자.
+
+Ex)
+onclick → click
+onmouseenter → mouseenter
+onmouseleave → mouseleave
+
 const title = document.querySelector("div.hello:first-child h1");
 
 console.dir(title);
@@ -18,3 +32,5 @@ function handleTitleClick(setColor) {
     title.addEventListener("click", function(){handleTitleClick("red")});
     title.addEventListener("mouseenter", function(){handleMouseEnter("blue")});
     title.addEventListener("mouseout", function(){handleMouseOut("purple")});
+ 
+ 인수를 가지는 함수를 사용할때의 기입법.
