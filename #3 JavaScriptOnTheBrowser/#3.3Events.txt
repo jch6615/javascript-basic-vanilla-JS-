@@ -1,0 +1,28 @@
+이전 강의에서 말했듯이, console.dir에서는 Element의 내부를 보여준다.
+기본적으로 JavaScript Object를 보여준다.
+이 Object들은 대부분 변경 가능하지만 못하는것도 가끔 있다.
+
+이 중에서도 style 이 cool!
+element의 style을 JavaScript로 볼 수 있다.
+
+const title = document.querySelector("div.hello:first-child h1");
+title.style.color = "blue";
+
+이런식으로 지정한 element.style.~등으로 HTML의 CSS가 수정가능하다.
+
+
+하지만, 우리는 JavaScript를 이용하여 Even를 Listen하는 일이 더 많을 것이다.
+event란.. 
+예를들어서 무언가를 click 을 할때, 마우스가 올라갈때, 이름을 적고 엔터를 누를때.. 여러 상황이 event가 된다.
+
+event 를 listen하기 위해서는..
+Ex)
+title.addEventListener("click", functionName); 과 같은 형태로 Listen 할 수 있다.
+예문의 경우, title이 HTML에서 grab해와 변수화 한 element이고,
+"click"이 element에 일어난 Event의 종류이다.
+그리고, funtionName은 Element에 event가 일어난 경우 실행해줬으면 하는 function의 이름을 넣는다.
+
+!주의!
+함수를 실행 시킬때는 function() 과 같이 괄호를 붙힌다.
+하지만, addEventListener에서는 ()를 붙히지 않는다. (예외 있음 회사 연수에서 한거)
+우리가 직접 function을 실행 시키는게 아니라, event 발생시 JavaScript가 대신 실행해주기를 바라기 때문!
