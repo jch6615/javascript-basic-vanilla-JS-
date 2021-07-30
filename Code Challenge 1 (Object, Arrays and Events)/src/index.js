@@ -19,22 +19,22 @@ const h2 = document.querySelector("h2");
 const superEventHandler = {
   handleMouseEnter: function () {
     h2.innerText = "The mouse is here!";
-    h2.style.color = "#1abc9c";
+    h2.style.color = colors[0];
   },
 
   handleMouseLeave: function () {
     h2.innerText = "The mouse is Gone!";
-    h2.style.color = "#3498db";
+    h2.style.color = colors[1];
   },
 
   handleWindowResize: function () {
     h2.innerText = "You just resized!";
-    h2.style.color = "#9b59b6";
+    h2.style.color = colors[2];
   },
 
   handleMouseRightClick: function () {
     h2.innerText = "That was a right click!";
-    h2.style.color = "#e74c3c";
+    h2.style.color = colors[4];
   }
 };
 
