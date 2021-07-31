@@ -20,7 +20,7 @@ Right tool for style is CSS, for animation is JavaScript.
 const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-    const clickedClass = "active sexy-font"
+    const clickedClass = "clicked sexy-font"
     if (h1.className === clickedClass) {
         h1.className = "";
     } else {
@@ -31,14 +31,14 @@ function handleTitleClick() {
  //But, there are still some of points that we can improve.
 
  //❗️Cleaning Code❗️
- //❗️point01. String "active" is using twice. (or more depends on case)
- // we better save "active" in variable to prevent error.
+ //❗️point01. String "clicked" is using twice. (or more depends on case)
+ // we better save "clicked" in variable to prevent error.
  
  //❗️point02. Bug
  // What if we already have className on elements before we update from JavaScript??
  // New ClassName from JavaScript doesn't give a shit about old one and just delete.
  // We have to add old className to variable every single time if we want to add className from HTML.
- // ex) const clickedClass = "active sexy-font"
+ // ex) const clickedClass = "clicked sexy-font"
 
 h1.addEventListener("click", handleTitleClick);
 
