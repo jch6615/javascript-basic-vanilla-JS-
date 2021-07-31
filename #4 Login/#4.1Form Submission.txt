@@ -26,5 +26,6 @@ function onLoginBtnClick() {
 //❗️ BUT❗️ 이렇게 하면 입력을 하여 버튼을 누르거나 enter을 누를때마다
 // 자동적으로 form이 submit이되고 페이지가 refresh되버린다.
 //❗️ This is not waht i wnat..
+// we are going to learn how to fix it on next class.
 
 loginButton.addEventListener("click", onLoginBtnClick);
