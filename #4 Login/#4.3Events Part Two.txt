@@ -1,25 +1,14 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
+저번 시간에는 form의 default behavior (refresh)를 막아보았다.
 
-const link = document.querySelector("a");
-
-function onLoginSubmit(event) {
-    event.preventDefault();
-    console.log(event);
-    console.log(loginInput.value);
-}
+이번에는 <a> tag의 default behavior을 막아보자.
+<a> tag의 default behavior은 클릭시 다른 페이지로 이동/여는 것 이다.
 
 function handleLinkClick(event) {
     event.preventDefault();
+    //alert("clicked!");
 }
 //❗️ alert는 조금 특이하기 때문에 모든 JavaScript의 행동을 멈춘다.
 //즉, 페이지가 이동되기전에 alert가 뜨고, 확인을 누르면 그 이후에 페이지가 이동된다.
-
-//submit을 감지해보자.
-loginForm.addEventListener("submit", onLoginSubmit);
-//submit 될때 onLoginSubmit 함수가 발동된다.
-//⭐️ submit은 엔터를 누르거나 버튼을 클릭할때 발생한다.
-// form 이 submit 되는 것은 form submit의 default behavior이다.(브라우저가 그렇게 프로그래밍됨)
 
 link.addEventListener("click", handleLinkClick);
 
