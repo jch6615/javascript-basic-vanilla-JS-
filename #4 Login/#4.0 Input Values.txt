@@ -1,7 +1,14 @@
-//const loginForm = document.querySelector("#login-form");
+본격적으로 어플 만들기를 시작해보자.
+사용자 정보(이름)을 입력하고 그 내용을 기억하는 과정을 만든다.
+
+항상 말했듯이 HTML ➡ JacvaScript 순서로 작성한다.
+
+EX)
+const loginForm = document.querySelector("#login-form");
 /* ❗️ documet.querySelector ➡️ to find element from HTML */
-//const loginInput = loginForm.querySelector("input");
-//const loginButton = loginForm.querySelector("button");
+
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 /* ❗️ loginForm.querySelector ➡️  to find element from in side loginForm  */
 /* it is possible because loginForm is HTML element ➡️  More focused search */
 
