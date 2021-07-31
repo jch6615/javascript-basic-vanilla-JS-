@@ -1,30 +1,15 @@
-//const loginForm = document.querySelector("#login-form");
-/* ❗️ documet.querySelector ➡️ to find element from HTML */
-//const loginInput = loginForm.querySelector("input");
-//const loginButton = loginForm.querySelector("button");
-/* ❗️ loginForm.querySelector ➡️  to find element from in side loginForm  */
-/* it is possible because loginForm is HTML element ➡️  More focused search */
-
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
 
 
-function onLoginBtnClick() {
-    const username = loginInput.value;
-    // if (username === "") {
-    //     console.log("please write your name");
-    // } else if (username.length > 15) {
-    //     alert("your name is too long");
-    // }
-    console.log(username);
+function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+    console.log(loginInput.value);
 }
-//위와 같은 작업을 해주었지만, 사실 HTML에 원래부터 존재하는 기능을 사용하는게 더 좋다.
-//<input required maxlength="15">와 같이 말이다.
-//❗️ 하지만 이것만으로는 기능이 유효하지 않다. 
-//❗️ 이러한 기능들을 유효하게 하려면 input이 form안에 들어가 있어야한다.
 
-//❗️ BUT❗️ 이렇게 하면 입력을 하여 버튼을 누르거나 enter을 누를때마다
-// 자동적으로 form이 submit이되고 페이지가 refresh되버린다.
-//❗️ This is not waht i wnat..
-
-loginButton.addEventListener("click", onLoginBtnClick);
+//submit을 감지해보자.
+loginForm.addEventListener("submit", onLoginSubmit);
+//submit 될때 onLoginSubmit 함수가 발동된다.
+//⭐️ submit은 엔터를 누르거나 버튼을 클릭할때 발생한다.
+// form 이 submit 되는 것은 form submit의 default behavior이다.(브라우저가 그렇게 프로그래밍됨)

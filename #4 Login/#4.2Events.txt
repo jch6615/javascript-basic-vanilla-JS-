@@ -1,0 +1,54 @@
+우리는 더 이상 button의 click event에 대해 생각하지 않아도된다.
+(HTML의 힘을 빌릴것이기 때문)
+
+대신, form 이 submit되는 것을 생각해야한다.
+submit event를 막거나 언제 일어나는지를 알고 싶다.
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+    console.log(loginInput.value);
+}
+
+//submit을 감지해보자.
+loginForm.addEventListener("submit", onLoginSubmit);
+//submit 될때 onLoginSubmit 함수가 발동된다.
+//⭐️ submit은 엔터를 누르거나 버튼을 클릭할때 발생한다.
+// form 이 submit 되는 것은 form submit의 default behavior이다.(브라우저가 그렇게 프로그래밍됨)
+
+❗️Nico Lied❗️
+브라우저는 onLoginSubmit()을 하고 있는것이 아니다.
+브라우저는 우선 onLoginSubmit function을 호출하고 실행시키기는 하지만
+onLoginSubmit(info) 괄호안에서 정보를 주고있다.
+브라우저는 브라우저 내로부터, event로부터 정보를 잡아내서 
+정보를 가진채로 onLoginSubmit function 실행 버튼을 누르고 있다.
+(우리에게 필요할지도 모르는 정보)
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+    console.log(loginInput.value);
+}
+
+⬆️event 인수를 부여해보자.
+event라는 인수, 장소를 부여하면 그 장소에 브라우저가 정보를 보내준다.
+
+loginForm.addEventListener("submit", onLoginSubmit);
+event sumbit이 listen되면 onLoginSubmit함수가 발동되는데
+이때의 함수는 onLoginSubmit() 처럼 인수부분이 비어있지 않고
+🌟 첫 번째 argument로써 추가적인 정보를 가진채로 호출하게 된다.
+
+어떤 정보를 브라우저가 주고 있는지를 확인하기 위해 magic line을 추가하겠다.
+event.preventDefault();
+preventDefault라는 함수를 호출.
+it stops defalut behavior of any event.
+⬆️ 이 경우 refresh되는것을 막음.
+
+🌟 모든 EventListener function의 첫 번째 argument는 항상 지금 막 벌어진 일에대한 정보를 포함한다.
+console.log(event);
+이하 정보를 열어보면 form이 submit되면서 실행된 event들을 볼 수 있다.
+(submit의 주체는 누구인가 input 대상은 누구인가 form 등 여러정보가 있다.)
