@@ -3,26 +3,30 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 //🌟 string만 포함된 변수는 대문자로 표기하는 경우가 많다. (string만)
 
 function onLoginSubmit(event) {
     event.preventDefault();
     const username = loginInput.value;
-    localStorage.setItem("username", username);
+    localStorage.setItem(USERNAME_KEY, username);
     loginForm.classList.add(HIDDEN_CLASSNAME);
+    paintGreeting(username);
+}
+
+function paintGreeting(username) {
     greeting.innerText = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-//🌟 다음 시간에는 페이지를 refresh해도 위의 상태가 유지되도록 해보자.
-//.add 나 .remove 처럼 지정한 값을 저장하는 API가 존재한다.
-//localStorage: 브라우저에 뭔가를 저장하여 나중에 사용할 수 있게 해준다.
+//check localStorage
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-//🌟 localStorage🌟
-//1. localStorage.setItem('myCat', "Tom"); ➡️ key를 지정하여 Item 저장.
-//2. const cat = localStorage.getItem('myCat'); ➡️ 해당 Item 읽어오기, 불러오기
-//3. localStorage.removeitem('myCat'); ➡️ 해당 Item 제거
-//4. localStorage.clear(); ➡️ localStorage 항목의 전체 제거
-
-//submit을 감지해보자.
-loginForm.addEventListener("submit", onLoginSubmit);
+if (savedUsername === null) {
+    //show the form
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    //show the greeting
+    paintGreeting(savedUsername);
+}

@@ -1,3 +1,43 @@
 🌟KEY POINT) Save Item in localStorage.
-🌟NEXT TIME) Hide the form, if username is exist in localStorage
+🌟NEXT TIME) Hide the form, if username exist in localStorage
 
+🌟 Hide the form, if username exist in localStorage
+1. we have to check if there is username in localStorage.
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+//🌟 string만 포함된 변수는 대문자로 표기하는 경우가 많다. (string만)
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username); ➡️ 입력한 값을 localStorage에 저장
+    loginForm.classList.add(HIDDEN_CLASSNAME); ➡️ form class="hidden"
+    paintGreeting(username); ➡️ 입력한 유저명을 hidden을 지우고 표시
+}
+
+🌟 중복 처리 함수화🌟
+function paintGreeting(username) {
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+//check localStorage
+const savedUsername = localStorage.getItem(USERNAME_KEY); ➡️ localStorage에 있는 USERNAME_KEY를 호출
+
+❗️ 화면 표시 조건❗️
+🌟 localStorage내에 username이 저장 되어 있으면 greeting(이름)을 표시
+🌟 localStorage내에 username이 없으면 form을 표시하고 submit event를 가동.
+
+if (savedUsername === null) {
+    //show the form
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    //show the greeting
+    paintGreeting(savedUsername);
+}
