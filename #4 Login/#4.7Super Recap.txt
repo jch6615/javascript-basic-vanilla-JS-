@@ -1,0 +1,27 @@
+🌟 KEY POINT) Understand whole flow
+🌟 NEXT TIME) 
+
+1️⃣ HTML에서 form & h1 작성 (둘다 초기 class="hidden")
+2️⃣ JavaScript will look localStorage to check if key(username) exist in localStorage
+3️⃣ if (null) loginForm의 class="hidden"을 remove.
+4️⃣ if form is submitted, activate function.
+🌟 fuction의 기능
+    1. event.preventDefault();
+    2. form 을 다시 hidden
+    3. 입력한 loginInput.value 값을 변수에 저장하여 localStorage에 저장.
+    4. paintGreeting(username); 실행
+
+🌟 paintGreeting의 기능
+function paintGreeting(username) {
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+3️⃣ if localStorage.getItem(USERNAME_KEY) is not null
+4️⃣ paintGreeting(savedUsername); 실행 localStorage에 저장된 이름.
+
+⬆️ 여기 까지가 전체의 흐름이다.
+
+이제, 코드를 조금 고쳐주고 싶다.
+paintGreeting함수는 인수를 받을 필요가 없다??
+음... 여기는 취향차이네요.paintGreeting에 인수를 둘지 없애고 기능안에 localStorage.getItem을 할지.
