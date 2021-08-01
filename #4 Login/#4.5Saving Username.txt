@@ -1,3 +1,6 @@
+🌟KEY POINT) Save Item in localStorage.
+🌟NEXT TIME) Hide the form, if username is exist in localStorage
+
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");

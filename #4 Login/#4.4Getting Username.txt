@@ -1,3 +1,6 @@
+🌟KEY POINT) 1️⃣ add class="hidden" 2️⃣ New format of `string ${variable}`;
+🌟NEXT TIME) keep onLoginSubmit status even after the page is refreshed.
+
 //사용자가 이름을 submit 하면 form이 사라지도록 해보자.
 
 const loginForm = document.querySelector("#login-form");
