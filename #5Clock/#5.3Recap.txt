@@ -1,0 +1,19 @@
+🌟 KEY POINT) 1️⃣ .padStart(a,b);와 .padEnd(a,b);의 이해
+🌟 KEY POINT) 2️⃣ string to number .parseInt() & number to String String()
+🌟 KEY POINT) 3️⃣ setInterval(처리, 주기ms); & setTimeout(처리, 실행까지의 간격);
+🌟 NEXT TIME) display random quotes
+
+1️⃣ getClock() function을 만들었다.
+🌟 getClock()의 기능
+    1. const date = new Date()으로 현재의 시간을 알려줌.
+    2. date.getHours() 등으로 시/분/초를 알 수 있음.
+    🌟 .padStart()사용을 위해 String()으로 감싸줌.
+    3. .innerText = `${hours}:${minutes}:${seconds}`;
+    🌟 `` 백틱을 사용하여 변수로 저장한 시/분/초를 표시함.
+
+2️⃣ getClock()
+기입하지 않으면 1초후에 시계가 나타남.
+
+3️⃣ setInterval(getClock, 1000);
+함수에 ()를 쓰지 않는다. 
+1000ms (=1sec) 마다 getClock()을 실행.
