@@ -1,0 +1,39 @@
+🌟 KEY POINT) 1️⃣ .padStart(a,b);와 .padEnd(a,b);의 이해
+🌟 KEY POINT) 2️⃣ string to number .parseInt() & number to String String()
+🌟 NEXT TIME) recap
+
+JavaScript 세계에서 문제나 의문점이 발생하면, 
+그 대부분은 이미 다른 개발자들이 겪은 일일것이다.
+⬇️ 이러한 반복적으로 고충으로 남는 내용은 JavaScript 언어제 function으로 있을 가능성이 높다.
+
+숫자가 한자리 숫자라도 두자리로 표현할 수 있게 해보자.
+ex) 1 ➡️ 01
+⬇️ 
+String이 적어도 2개의 문자를 가지도록.
+
+🌟 .padStart(a,b)
+a: string의 길이
+b: string의 길이가 a가 아니라면 앞에 b를 추가한다.
+
+ex)"1".padStart(2,"0"); ➡️ "01"
+🐷 a에 지정한 string의 길이에 부족한만큼 padding b를 추가한다는 생각.
+(.padEnd도 있다)
+
+<JavaScript>
+const clock = document.querySelector("#clock");
+
+//🌟 clock 🌟
+function getClock() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+
+    clock.innerText = `${hours}:${minutes}:${seconds}`;
+}
+//그냥 시간대신 .padStart()를 첨가한 hours, minutes, seconds를 넣자.
+//❗️date.getHours()..는 string형이 아니라 숫자이다.
+//String(date.getHours()) 처럼 String()으로 감싸면 String, 즉 문자가 된다.
+
+getClock()
+setInterval(getClock, 1000);
