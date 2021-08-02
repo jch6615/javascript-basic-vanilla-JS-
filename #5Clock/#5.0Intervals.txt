@@ -12,3 +12,20 @@ APP(HTML)안에 여러가지 기능이 있으면 JavaScript와 CSS를 기능에 
 interval: '매번' 일어나야 하는 무언가.
 ex)'매 2초'마다와 같이 주기를 정할 수 있다.
 
+<JavaScript>
+const clock = document.querySelector("#clock");
+
+//🌟 intervals & timeout 🌟
+function sayHello() {
+    console.log("hello");
+}
+
+/*
+🌟 setInterval(a,b) 
+setInterval은 두개의 argument를 가진다.
+a: 실행하고 싶은 처리, 함수
+b: 호출되는 function의 간격. 몇 ms(milliseconds)으로 할지.
+*/
+
+//sayHello()를 5초마다 실행시켜보자.
+setInterval(sayHello, 5000); //5000ms === 5s 

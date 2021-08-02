@@ -1,0 +1,36 @@
+🌟 KEY POINT) 1️⃣ Timeout의 개념과 setTimeout(함수명, 얼마후에 시작할지ms)
+🌟 KEY POINT) 2️⃣ function getClock, new Date(), .getHours...
+🌟 NEXT TIME) 시간이 한 자릿수로 표시되는 포멧 개선
+
+<JavaScript>
+const clock = document.querySelector("#clock");
+
+//🌟 intervals & timeout 🌟
+function sayHello() {
+    console.log("hello");
+}
+
+/*
+🌟 setTimeout(a,b)
+setTimeout도 두개의 argument를 가진다.
+a: 실행하고 싶은 처리, 함수
+b: 얼마후에 실행할지 ms 단위.
+*/
+
+//이번에는 sayHello()를 한번만, 대신 일정 시간이 흐른후에 실행되도록 하자.
+setTimeout(sayHello, 5000);
+
+---------------------------------------------------------------
+let't go back to our mission. to show time (hour:minute)
+
+<JavaScript>
+const clock = document.querySelector("#clock");
+
+//🌟 clock 🌟
+function getClock() {
+    const date = new Date();
+    clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+}
+
+getClock()
+setInterval(getClock, 1000);
