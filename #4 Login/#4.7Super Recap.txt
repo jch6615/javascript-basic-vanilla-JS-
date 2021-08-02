@@ -1,5 +1,5 @@
 🌟 KEY POINT) Understand whole flow
-🌟 NEXT TIME) 
+🌟 NEXT TIME) We are going to make clock!
 
 1️⃣ HTML에서 form & h1 작성 (둘다 초기 class="hidden")
 2️⃣ JavaScript will look localStorage to check if key(username) exist in localStorage

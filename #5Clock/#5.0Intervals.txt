@@ -1,0 +1,14 @@
+🌟 KEY POINT) interval의 개념과 setInterval(함수명, 주기ms)
+🌟 NEXT TIME) Timeout
+
+APP(HTML)안에 여러가지 기능이 있으면 JavaScript와 CSS를 기능에 따라 나눠서 관리하자.
+
+1️⃣ 시계가 표시될 장소를 만들자. (초기시간 00:00)
+<h2 id="clock">00:00</h2> 
+
+2️⃣ JavaScript에서 불러오자.
+
+🌟 intervals & timeout 🌟
+interval: '매번' 일어나야 하는 무언가.
+ex)'매 2초'마다와 같이 주기를 정할 수 있다.
+
