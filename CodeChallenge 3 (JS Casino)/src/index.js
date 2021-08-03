@@ -24,8 +24,7 @@ function compareNum(event) {
     //result
     if (isNaN(machineNum) || isNaN(userNum)) {
         result.innerText = `please fill in all blank above!`;
-        result.classList.remove(HIDDEN_CLASSNAME);
-        result.classList.add(WARNING_CLASSNAME);
+        addWarning();
     } else {
         if (userNum === machineNum) {
         result.innerText = `You won!`;
@@ -41,6 +40,13 @@ function removeHidden () {
     machineNumText.classList.remove(HIDDEN_CLASSNAME);
     result.classList.remove(HIDDEN_CLASSNAME);
     result.classList.remove(WARNING_CLASSNAME);
+}
+
+function addWarning() {
+    result.classList.remove(HIDDEN_CLASSNAME);
+    result.classList.add(WARNING_CLASSNAME);
+    userNumText.classList.add(HIDDEN_CLASSNAME);
+    machineNumText.classList.add(HIDDEN_CLASSNAME);
 }
 
 casinoForm.addEventListener("submit", compareNum);
