@@ -8,6 +8,7 @@ const machineNumText = document.querySelector("#machineNum");
 const result = document.querySelector("#result");
 
 const HIDDEN_CLASSNAME = "hidden";
+const WARNING_CLASSNAME = "warning";
 
 /* functions */
 function compareNum(event) {
@@ -21,26 +22,25 @@ function compareNum(event) {
     //result text machine
     machineNumText.innerText = `the machine chose: ${machineNum}`;
     //result
-    if (userNum === machineNum) {
-        result.innerText = `You won!`;
+    if (isNaN(machineNum) || isNaN(userNum)) {
+        result.innerText = `please fill in all blank above!`;
+        result.classList.remove(HIDDEN_CLASSNAME);
+        result.classList.add(WARNING_CLASSNAME);
     } else {
+        if (userNum === machineNum) {
+        result.innerText = `You won!`;
+        } else {
         result.innerText = `You lost!`
+        } 
+        removeHidden();
     }
 }
 
-// function hideResult(event) {
-//     event.preventDefault();
-//     result.innerText = `please fill in all blank above!`;
-//     result.classList.remove(HIDDEN_CLASSNAME);
-//     result.classList.add("warning");
-// }
+function removeHidden () {
+    userNumText.classList.remove(HIDDEN_CLASSNAME);
+    machineNumText.classList.remove(HIDDEN_CLASSNAME);
+    result.classList.remove(HIDDEN_CLASSNAME);
+    result.classList.remove(WARNING_CLASSNAME);
+}
 
-/* event listener */
-// if (range.value === "" || guess.value === "") {
-//     casinoForm.addEventListener("submit", hideResult);
-// } else {
-// }
 casinoForm.addEventListener("submit", compareNum);
-userNumText.classList.remove(HIDDEN_CLASSNAME);
-machineNumText.classList.remove(HIDDEN_CLASSNAME);
-result.classList.remove(HIDDEN_CLASSNAME);
