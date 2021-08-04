@@ -8,9 +8,9 @@ function untilChristmas () {
     //time gap
     const gap = christmas.getTime() - today.getTime();
     const days = Math.ceil(gap / (1000 * 60 * 60 * 24));
-    const hours = Math.ceil(gap / (1000 * 60 * 60)) % 24;
-    const minutes = Math.ceil(gap / (1000 * 60)) % 60;
-    const seconds = Math.ceil(gap / 1000) % 60;
+    const hours = String(Math.ceil(gap / (1000 * 60 * 60)) % 24).padStart(2, "0");
+    const minutes = String(Math.ceil(gap / (1000 * 60)) % 60).padStart(2, "0");
+    const seconds = String(Math.ceil(gap / 1000) % 60).padStart(2, "0");
 
     // const days = Math.ceil(gap / (1000 * 60 * 60 * 24));
     // const hours = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
