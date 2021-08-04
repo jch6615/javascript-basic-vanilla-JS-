@@ -1,0 +1,3 @@
+🌟 KEY POINT) 1️⃣ Math.random() 2️⃣ Math.floor/ceil/round 3️⃣ Object (need to review)
+🌟 NEXT TIME) display random background
+

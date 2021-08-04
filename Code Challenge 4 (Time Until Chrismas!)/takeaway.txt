@@ -1,0 +1,24 @@
+✅ 시간 정보 호출 방법
+const date = new Date(); ➡️ 현재 날짜와 시간.
+cosnt christmas = new Date(December 25, 2021 00:00:00');
+let birthday = new Date('1995-12-17T03:24:00')
+let birthday = new Date(1995, 11, 17)            // 월은 0부터 시작
+let birthday = new Date(1995, 11, 17, 3, 24, 0)
+
+✅ 시간 사이의 차이를 계산 하는방법.
+.getTime() function을 이용한다. 결과값은 ms(밀리초) 단위로 나온다.
+ex) const gap = christmas.getTime() - today.getTime();
+
+//❌ Bad Code 💩
+const days = Math.ceil(gap / (1000 * 60 * 60 * 24));
+ms 단위이기 때문에 24(시간) * 60 (분) * 60(초) * 1000(ms) 로 나누어 준것이 day(일) 이된다.
+이하 동일.
+const hours = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.ceil((gap % (1000 * 60)) / 1000);
+
+//✅ Good Code ✨
+const days = Math.ceil(gap / (1000 * 60 * 60 * 24));
+const hours = Math.ceil(gap / (1000 * 60 * 60)) % 24;
+const minutes = Math.ceil(gap / (1000 * 60)) % 60;
+const seconds = Math.ceil(gap / 1000) % 60;

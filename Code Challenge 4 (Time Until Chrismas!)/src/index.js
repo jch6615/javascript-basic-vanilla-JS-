@@ -8,10 +8,14 @@ function untilChristmas () {
     //time gap
     const gap = christmas.getTime() - today.getTime();
     const days = Math.ceil(gap / (1000 * 60 * 60 * 24));
-    const hours = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    const minutes = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60))
-    const seconds = Math.ceil((gap % (1000 * 60)) / 1000)
+    const hours = Math.ceil(gap / (1000 * 60 * 60)) % 24;
+    const minutes = Math.ceil(gap / (1000 * 60)) % 60;
+    const seconds = Math.ceil(gap / 1000) % 60;
 
+    // const days = Math.ceil(gap / (1000 * 60 * 60 * 24));
+    // const hours = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    // const minutes = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+    // const seconds = Math.ceil((gap % (1000 * 60)) / 1000);
 
     clockTitle.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
