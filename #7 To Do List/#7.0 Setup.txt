@@ -1,0 +1,18 @@
+🌟 KEY POINT) Start graduation project - TodoList
+🌟 NEXT TIME) localStorage?
+
+먼저, HTML내에 form을 만들자. 사용자가 todo를 작성하고 나열할 수 있어야 한다.
+
+<JavaScript>
+const toDoForm = document.querySelector("#todo-form");
+const toDoInput = document.querySelector("#todo-form input");
+const toDoList = document.querySelector("#todo-list");
+
+
+function handleToDosubmit(event) {
+    event.preventDefault();
+    const newToDo = toDoInput.value;
+    toDoInput.value = "";
+}
+
+toDoForm.addEventListener("submit", handleToDosubmit);
