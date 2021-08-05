@@ -1,0 +1,18 @@
+🌟 KEY POINT) Recap
+🌟 NEXT TIME) Start graduation project - TodoList
+
+We finished about random things!
+✅ Math.random() ➡️ 0 부터 1 사이의 랜덤한 숫자 (소수)
+
+✅ 원하는 숫자를 얻기 위해서 Math.random()에 숫자를 곱해준다.
+배열의 요소를 지정하려면 배열의 길이만큼 array.length. (0 ~ < array.legth)
+
+✅ 그다음 Math.floor()을 사용. 소수점 이하를 내림처리한다.
+
+✅ const bgImage = document.createElement("tag");로 JavaScript내에서 tag를 생성하였다.
+✅ bgImage.src = `img/${chosenImage}` 로 src도 부여하였다.
+(srx = "" 가 아니라 ``임에 주의하자.)
+
+✅ 이후 document.body.appendChild(bgImage)로 body 안의 마지막 자식요소로써 추가 해주었다.
+✅ document.body.prepend()를 하면 가장 위의 요소로 추가 할 수 있다.
+✅ document.body.insertBefore(a,b); 는 a를 b앞의 요소로써 추가 해준다.
