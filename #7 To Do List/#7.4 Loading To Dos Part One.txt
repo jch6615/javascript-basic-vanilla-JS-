@@ -1,5 +1,5 @@
-🌟 KEY POINT) toDos라는 array를 생성. JSON.stringify(toDos)로 string의 형태로 저장.
-🌟 NEXT TIME) How to load toDos.
+🌟 KEY POINT) How to load toDos Part One
+🌟 NEXT TIME) How to load toDos Part Two
 
 저번 시간에는 입력한 todo를 localStorage에 저장하였다.
 하지만, 아직 저장한 값을 화면에 불러내는 못한다.

@@ -1,0 +1,12 @@
+🌟 KEY POINT) How to load toDos Part Two
+🌟 NEXT TIME) Delete todo from localStorage
+
+<JavaScript>
+const savedToDos = localStorage.getItem(TODOS_KEY);
+console.log(savedToDos);
+if(savedToDos){
+    const parsedToDos = JSON.parse(savedToDos);
+    ✅ toDos = parsedToDos; ✨ refresh해도 저장한 값을 불러올 수 있도록 let toDos = []를 바꿔준다.
+    ✅ parsedToDos.forEach(paintToDo); ✨ list 안에 있는 각각의 요소들에 paintToDo를 적용한다
+    (요소 하나씩 ul > li > span & button 을 만들어줌)
+}
