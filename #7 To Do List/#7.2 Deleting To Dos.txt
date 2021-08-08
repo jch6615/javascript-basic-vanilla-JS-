@@ -1,3 +1,10 @@
+🌟 KEY POINT) event.target으로 어떤 button인지 식별. .remove()로 삭제.
+🌟 NEXT TIME) refresh해도 todo가 남아 있도록 save
+
+todo를 지울 수 있는 button을 만들자. (JavaScrip에서 만든다.)
+button은 click event를 listen 해야함.
+
+<JavaScrip>
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");

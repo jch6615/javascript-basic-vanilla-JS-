@@ -1,0 +1,24 @@
+🌟 KEY POINT) toDoList(ul) > li > span
+🌟 NEXT TIME) LIST를 지울수 있게. 
+
+<JavaScript>
+const toDoForm = document.querySelector("#todo-form");
+const toDoInput = document.querySelector("#todo-form input");
+const toDoList = document.querySelector("#todo-list");
+
+function paintToDo(newToDo) {
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    li.appendChild(span);
+    span.innerText = newToDo;
+    toDoList.appendChild(li);
+}
+
+function handleToDosubmit(event) {
+    event.preventDefault();
+    const newToDo = toDoInput.value;
+    toDoInput.value = "";  
+    paintToDo(newToDo);
+}
+
+toDoForm.addEventListener("submit", handleToDosubmit);

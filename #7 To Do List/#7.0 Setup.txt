@@ -1,5 +1,5 @@
-🌟 KEY POINT) Start graduation project - TodoList
-🌟 NEXT TIME) localStorage?
+🌟 KEY POINT) made input for ToDoList
+🌟 NEXT TIME) make ul / li 
 
 먼저, HTML내에 form을 만들자. 사용자가 todo를 작성하고 나열할 수 있어야 한다.
 
