@@ -1,0 +1,28 @@
+🌟 KEY POINT) toDos라는 array를 생성. JSON.stringify(toDos)로 string의 형태로 저장.
+🌟 NEXT TIME) How to load toDos.
+
+저번 시간에는 입력한 todo를 localStorage에 저장하였다.
+하지만, 아직 저장한 값을 화면에 불러내는 못한다.
+
+1️⃣ JSON.stringify()로 string으로 저장한 배열을 JavaScript에서 이해 할 수 있는 array로 가져오자.
+✅ JSON.parse
+string 이 JavaScript에서 사용가능한 array가 된다.
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if(savedToDos){
+    const parsedToDos = JSON.parse(savedToDos);
+    parsedToDos.forEach(element => console.log("this is the turn of ", element));
+}
+
+localStorage안에 todo가 저장되 있으면, parse 해온다.
+이렇게 가져온 array의 안에 있는 각각의 item에 function을 부여하고 싶어 질것이다.
+
+✅ .forEach // arrow function
+The forEach() method executes a provided function once for each array element.
+
+함수를 forEach()에 지정하는데에는 두가지 방법이 있다.
+1️⃣ 하나는 별도의 함수를 만든후 .forEach(function)으로 넣는것이고.
+2️⃣ 두번재는 arrow function이다.
+ex) parsedToDos.forEach(element => console.log("this is the turn of ", element));
+array 안에 있는 모든 각각의 element 에 => 이후의 내용을 실행하는것이된다.
