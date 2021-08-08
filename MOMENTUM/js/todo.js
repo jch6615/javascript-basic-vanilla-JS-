@@ -21,6 +21,8 @@ JavaScript object나 array나 어떤 것이든 string으로 바꿔주는 기능.
 function deleteToDo (event) {
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 //어떤 버튼의 내용을 지워야하는지 인식하지 못하고 있다.
 //모든 버튼이 같은 eventListner을 가지고 있기 때문이다.
@@ -29,8 +31,9 @@ function deleteToDo (event) {
 
 function paintToDo(newToDo) {
     const li = document.createElement("li");
+    li.id = newToDo.id;
     const span = document.createElement("span");
-    span.innerText = newToDo;
+    span.innerText = newToDo.text;
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click",deleteToDo);
@@ -43,8 +46,12 @@ function handleToDosubmit(event) {
     event.preventDefault();
     const newToDo = toDoInput.value;
     toDoInput.value = "";  
-    toDos.push(newToDo);
-    paintToDo(newToDo);
+    const newTodoObj = {
+        text: newToDo,
+        id: Date.now(),
+    }
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 
@@ -57,3 +64,9 @@ if(savedToDos){
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+function sexyFilter(){
+
+}
+[1,2,3,4].filter(sexyFilter)
+//true는 유지하고 false는 지운다.

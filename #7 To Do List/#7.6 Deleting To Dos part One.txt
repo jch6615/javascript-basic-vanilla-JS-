@@ -1,0 +1,6 @@
+🌟 KEY POINT) Delete todo from localStorage
+🌟 NEXT TIME) 
+
+✅ ✨ 
+localStorage를 데이터 베이스라고 생각해보자 ()
+array의 요소에 각자의 id를 부여하자.
