@@ -2,6 +2,20 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
 
+const toDos = [];
+//todo 내용을 입력하면 내용을 저장할 Array를 만든다.
+//❗️ localStorage에서는 Array를 저장 할 수 없다. 오직 텍스트만 저장 가능.
+
+function saveToDos(){
+    localStorage.setItem("todos", JSON.stringify(toDos));
+}
+//Array의 형태로 저장하고 싶지만 그럴 수 없다.
+//브라우저에 있는 기능을 사용해보자.
+/*
+✅ JSON.stringify
+JavaScript object나 array나 어떤 것이든 string으로 바꿔주는 기능.
+*/
+
 function deleteToDo (event) {
     const li = event.target.parentElement;
     li.remove();
@@ -27,7 +41,9 @@ function handleToDosubmit(event) {
     event.preventDefault();
     const newToDo = toDoInput.value;
     toDoInput.value = "";  
+    toDos.push(newToDo);
     paintToDo(newToDo);
+    saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDosubmit);
