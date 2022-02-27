@@ -11,7 +11,7 @@ title.style.color = "blue";
 이런식으로 지정한 element.style.~등으로 HTML의 CSS가 수정가능하다.
 
 
-하지만, 우리는 JavaScript를 이용하여 Even를 Listen하는 일이 더 많을 것이다.
+하지만, 우리는 JavaScript를 이용하여 Event를 Listen하는 일이 더 많을 것이다.
 event란.. 
 예를들어서 무언가를 click 을 할때, 마우스가 올라갈때, 이름을 적고 엔터를 누를때.. 여러 상황이 event가 된다.
 
